@@ -45,8 +45,8 @@ if ( ! function_exists( 'twentytwentytwo_styles' ) ) :
 	function twentytwentytwo_styles() {
 		// Register theme stylesheet.
 		$theme_version = wp_get_theme()->get( 'Version' );
-
 		$version_string = is_string( $theme_version ) ? $theme_version : false;
+
 		wp_register_style(
 			'twentytwentytwo-style',
 			get_template_directory_uri() . '/style.css',
@@ -60,6 +60,31 @@ if ( ! function_exists( 'twentytwentytwo_styles' ) ) :
 		// Enqueue theme stylesheet.
 		wp_enqueue_style( 'twentytwentytwo-style' );
 
+		if ( is_front_page() ) {
+			wp_enqueue_script(
+				'glead-script',
+				get_theme_file_uri( '/assets/js/main.js' ),
+				array(),
+				$version_string,
+				true
+			);
+			
+			wp_enqueue_script(
+				'p5',
+				get_theme_file_uri( '/assets/libs/p5.min.js' ),
+				array( 'glead-script' ),
+				'1.1.9',
+				true
+			);
+			
+			wp_enqueue_script(
+				'vanta-topology',
+				get_theme_file_uri( '/assets/libs/vanta.topology.min.js' ),
+				array( 'p5' ),
+				'1.0.0',
+				true
+			);
+		}
 	}
 
 endif;
@@ -101,21 +126,21 @@ if ( ! function_exists( 'twentytwentytwo_get_font_face_styles' ) ) :
 
 		return "
 		@font-face{
-			font-family: 'Source Serif Pro';
-			font-weight: 200 900;
+			font-family: 'Montserrat';
+			font-weight: 700;
 			font-style: normal;
 			font-stretch: normal;
 			font-display: swap;
-			src: url('" . get_theme_file_uri( 'assets/fonts/SourceSerif4Variable-Roman.ttf.woff2' ) . "') format('woff2');
+			src: url('" . get_theme_file_uri( 'assets/fonts/montserat_700_latin.woff2' ) . "') format('woff2');
 		}
 
 		@font-face{
-			font-family: 'Source Serif Pro';
-			font-weight: 200 900;
-			font-style: italic;
+			font-family: 'Roboto';
+			font-weight: 300;
+			font-style: normal;
 			font-stretch: normal;
 			font-display: swap;
-			src: url('" . get_theme_file_uri( 'assets/fonts/SourceSerif4Variable-Italic.ttf.woff2' ) . "') format('woff2');
+			src: url('" . get_theme_file_uri( 'assets/fonts/roboto_300_latin.woff2' ) . "') format('woff2');
 		}
 		";
 
@@ -139,7 +164,8 @@ if ( ! function_exists( 'twentytwentytwo_preload_webfonts' ) ) :
 	 */
 	function twentytwentytwo_preload_webfonts() {
 		?>
-		<link rel="preload" href="<?php echo esc_url( get_theme_file_uri( 'assets/fonts/SourceSerif4Variable-Roman.ttf.woff2' ) ); ?>" as="font" type="font/woff2" crossorigin>
+		<link rel="preload" href="<?php echo esc_url( get_theme_file_uri( 'assets/fonts/montserat_700_latin.woff2' ) ); ?>" as="font" type="font/woff2" crossorigin>
+		<link rel="preload" href="<?php echo esc_url( get_theme_file_uri( 'assets/fonts/roboto_300_latin.woff2' ) ); ?>" as="font" type="font/woff2" crossorigin>
 		<?php
 	}
 

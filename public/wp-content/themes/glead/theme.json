@@ -121,7 +121,7 @@
 				},
 				{
 					"slug": "primary",
-					"color": "#1a4548",
+					"color": "#d61d25",
 					"name": "Primary"
 				},
 				{
@@ -145,9 +145,9 @@
 			},
 			"typography": {
 				"font-size": {
-					"huge": "clamp(2.25rem, 4vw, 2.75rem)",
-					"gigantic": "clamp(2.75rem, 6vw, 3.25rem)",
-					"colossal": "clamp(3.25rem, 8vw, 6.25rem)"
+					"huge": "clamp(2rem, 2vw, 2.75rem)",
+					"gigantic": "clamp(2.5rem, 3vw, 3.25rem)",
+					"colossal": "clamp(3rem, 4vw, 6.25rem)"
 				},
 				"line-height": {
 					"tiny": 1.15,
@@ -171,14 +171,14 @@
 			"dropCap": false,
 			"fontFamilies": [
 				{
-					"fontFamily": "-apple-system,BlinkMacSystemFont,\"Segoe UI\",Roboto,Oxygen-Sans,Ubuntu,Cantarell,\"Helvetica Neue\",sans-serif",
+					"fontFamily": "Roboto, sans-serif",
 					"name": "System Font",
 					"slug": "system-font"
 				},
 				{
-					"fontFamily": "\"Source Serif Pro\", serif",
-					"name": "Source Serif Pro",
-					"slug": "source-serif-pro"
+					"fontFamily": "Montserrat, serif",
+					"name": "Montserrat",
+					"slug": "montserrat"
 				}
 			],
 			"fontSizes": [
@@ -202,7 +202,7 @@
 		},
 		"layout": {
 			"contentSize": "650px",
-			"wideSize": "1000px"
+			"wideSize": "1100px"
 		}
 	},
 	"styles": {
@@ -221,7 +221,7 @@
 			},
 			"core/post-title": {
 				"typography": {
-					"fontFamily": "var(--wp--preset--font-family--source-serif-pro)",
+					"fontFamily": "var(--wp--preset--font-family--montserrat)",
 					"fontWeight": "300",
 					"lineHeight": "var(--wp--custom--typography--line-height--tiny)",
 					"fontSize": "var(--wp--custom--typography--font-size--gigantic)"
@@ -241,7 +241,7 @@
 			},
 			"core/query-title": {
 				"typography": {
-					"fontFamily": "var(--wp--preset--font-family--source-serif-pro)",
+					"fontFamily": "var(--wp--preset--font-family--montserrat)",
 					"fontWeight": "300",
 					"lineHeight": "var(--wp--custom--typography--line-height--small)",
 					"fontSize": "var(--wp--custom--typography--font-size--gigantic)"
@@ -268,32 +268,32 @@
 		"elements": {
 			"h1": {
 				"typography": {
-					"fontFamily": "var(--wp--preset--font-family--source-serif-pro)",
-					"fontWeight": "300",
+					"fontFamily": "var(--wp--preset--font-family--montserrat)",
+					"fontWeight": "700",
 					"lineHeight": "var(--wp--custom--typography--line-height--tiny)",
 					"fontSize": "var(--wp--custom--typography--font-size--colossal)"
 				}
 			},
 			"h2": {
 				"typography": {
-					"fontFamily": "var(--wp--preset--font-family--source-serif-pro)",
-					"fontWeight": "300",
+					"fontFamily": "var(--wp--preset--font-family--montserrat)",
+					"fontWeight": "700",
 					"lineHeight": "var(--wp--custom--typography--line-height--small)",
 					"fontSize": "var(--wp--custom--typography--font-size--gigantic)"
 				}
 			},
 			"h3": {
 				"typography": {
-					"fontFamily": "var(--wp--preset--font-family--source-serif-pro)",
-					"fontWeight": "300",
+					"fontFamily": "var(--wp--preset--font-family--montserrat)",
+					"fontWeight": "700",
 					"lineHeight": "var(--wp--custom--typography--line-height--tiny)",
 					"fontSize": "var(--wp--custom--typography--font-size--huge)"
 				}
 			},
 			"h4": {
 				"typography": {
-					"fontFamily": "var(--wp--preset--font-family--source-serif-pro)",
-					"fontWeight": "300",
+					"fontFamily": "var(--wp--preset--font-family--montserrat)",
+					"fontWeight": "700",
 					"lineHeight": "var(--wp--custom--typography--line-height--tiny)",
 					"fontSize": "var(--wp--preset--font-size--x-large)"
 				}
@@ -310,7 +310,7 @@
 			"h6": {
 				"typography": {
 					"fontFamily": "var(--wp--preset--font-family--system-font)",
-					"fontWeight": "400",
+					"fontWeight": "300",
 					"textTransform": "uppercase",
 					"lineHeight": "var(--wp--custom--typography--line-height--normal)",
 					"fontSize": "var(--wp--preset--font-size--medium)"

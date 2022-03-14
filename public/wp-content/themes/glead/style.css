@@ -146,3 +146,6 @@ body > .is-root-container > .wp-block-template-part > .wp-block-cover,
 	padding-left: var(--wp--custom--spacing--outer);
 }
 
+.p5Canvas {
+	max-width: 100%;
+}
