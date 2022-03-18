@@ -10,6 +10,7 @@
  */
 
 
+
 if ( ! function_exists( 'twentytwentytwo_support' ) ) :
 
 	/**
@@ -47,32 +48,43 @@ if ( ! function_exists( 'twentytwentytwo_styles' ) ) :
 		$theme_version = wp_get_theme()->get( 'Version' );
 		$version_string = is_string( $theme_version ) ? $theme_version : false;
 
+		//$build_data = include get_template_directory() . '/build/index.asset.php';
+
 		wp_register_style(
-			'twentytwentytwo-style',
-			get_template_directory_uri() . '/style.css',
+			'arvo-style',
+			get_template_directory_uri() . '/assets/public/css/index.css',
 			array(),
-			$version_string
+			$version_string,
+		);
+
+		wp_register_style(
+			'icofont',
+			get_template_directory_uri() . '/assets/fonts/icofont/icofont.min.css',
+			array('arvo-style'),
+			'1.0.0',
 		);
 
 		// Add styles inline.
-		wp_add_inline_style( 'twentytwentytwo-style', twentytwentytwo_get_font_face_styles() );
+		wp_add_inline_style( 'arvo-style', twentytwentytwo_get_font_face_styles() );
 
 		// Enqueue theme stylesheet.
-		wp_enqueue_style( 'twentytwentytwo-style' );
+		wp_enqueue_style( 'arvo-style' );
+		wp_enqueue_style( 'icofont' );
 
 		if ( is_front_page() ) {
+
 			wp_enqueue_script(
 				'glead-script',
-				get_theme_file_uri( '/assets/js/main.js' ),
-				array(),
-				$version_string,
+				get_theme_file_uri( '/assets/public/js/index.js' ),
+				array('vanta-topology'),
+				$version_string, 
 				true
 			);
 			
 			wp_enqueue_script(
 				'p5',
 				get_theme_file_uri( '/assets/libs/p5.min.js' ),
-				array( 'glead-script' ),
+				array(),
 				'1.1.9',
 				true
 			);

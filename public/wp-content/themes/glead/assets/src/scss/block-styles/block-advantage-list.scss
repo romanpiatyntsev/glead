@@ -1,0 +1,44 @@
+.advantage-list {
+    padding: 50px 0;
+
+    & > .wp-block-group {
+        gap: 0;
+    }
+
+    h2 {
+        max-width: 700px;
+        margin: 0 auto 1.75em;
+    }
+
+    .wp-block-columns {
+        margin-bottom: 0;
+    }
+
+    /* set styles for icon */
+    .wp-block-column > p:first-child {
+        text-align: center;
+
+        i[class^=icofont-] {
+            display: inline-block;
+            color: #fff;
+            padding: 18px;
+            background: var(--wp--preset--color--primary);
+            border-radius: 50%;
+            font-size: 60px;
+        }
+    }
+
+    @media (min-width: 600px) and (max-width: 782px) {
+
+        .wp-block-columns:not(.is-not-stacked-on-mobile) {
+
+            .wp-block-column:not(:only-child) {
+                flex: 0 1 100% !important;
+            }
+
+            .wp-block-column {
+                margin-left: 0;
+            }
+        }
+    }
+}

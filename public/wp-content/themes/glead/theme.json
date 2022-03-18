@@ -145,9 +145,9 @@
 			},
 			"typography": {
 				"font-size": {
-					"huge": "clamp(2rem, 2vw, 2.75rem)",
-					"gigantic": "clamp(2.5rem, 3vw, 3.25rem)",
-					"colossal": "clamp(3rem, 4vw, 6.25rem)"
+					"huge": "clamp(1.2rem, 1vw, 1.75rem)",
+					"gigantic": "clamp(1.6rem, 2.5vw, 2rem)",
+					"colossal": "clamp(2.5rem, 4vw, 3.5rem)"
 				},
 				"line-height": {
 					"tiny": 1.15,
