@@ -6,7 +6,7 @@ public/wp-content/*
 # exclude all theme except glead
 !public/wp-content/themes/
 public/wp-content/themes/*
-!public/wp-content/themes/glead
+!public/wp-content/themes/start
 
 # !public/wp-content/mu-plugins/
 
@@ -16,6 +16,7 @@ public/wp-content/themes/*
 # ignore node dependency directories
 node_modules/
 vendor/
+images/
 .db/
 wp-config.php
 

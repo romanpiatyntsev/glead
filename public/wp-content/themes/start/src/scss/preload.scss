@@ -1,0 +1,16 @@
+*,
+*::before,
+*::after {
+	box-sizing: border-box;
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+}
+
+@import "parts/variable";
+@import "../../node_modules/normalize.css/normalize";
+@import "parts/typography";
+@import "parts/main_menu";
+@import "parts/header";

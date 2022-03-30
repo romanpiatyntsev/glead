@@ -10,6 +10,13 @@
 			]
 		},
 		{
+			"name": "pricing",
+			"title": "Pricing",
+			"postTypes": [
+				"page"
+			]
+		},
+		{
 			"name": "page-large-header",
 			"title": "Page (Large Header)",
 			"postTypes": [
