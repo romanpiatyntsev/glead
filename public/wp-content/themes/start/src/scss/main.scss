@@ -4,6 +4,6 @@
  * Copyright 2022 Arvosoftware, Inc.
  */
 
-@import "parts/variable";
-@import '../../node_modules/bootstrap/scss/bootstrap-grid';
-
+@import "all_pages";
+@import "../../../../../wp-includes/css/dist/block-library/style.min.css";
+@import "parts/contact_form";

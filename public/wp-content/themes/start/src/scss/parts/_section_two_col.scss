@@ -1,0 +1,58 @@
+.two-col {
+    padding: 60px 0;
+
+    .flex-row-reverse {
+        .left-column {
+            padding-left: 50px;
+        }
+    }
+
+    p {
+        color: $text-color-gray;
+        font-size: 20px;
+        line-height: 1.8;
+
+        a {
+            @include text-link(35px);
+        }
+    }
+
+    ul {
+        line-height: 2.7;
+        font-size: 22px;
+        margin: 0;
+        color: #afafaf;
+        list-style-type: none;
+
+        & > li {
+            position: relative;
+        }
+
+        & > li:before {
+            content: "";
+            position: absolute;
+            background: #f5cdcd;
+            width: 15px;
+            height: 2px;
+            left: -25px;
+            top: 50%;
+        }
+    }
+
+    @media (max-width: map-get($grid-breakpoints, md)) {
+        text-align: center;
+        ul {
+            text-align: left;
+            padding-left: 35px;
+        }
+    }
+
+    @media (max-width: map-get($grid-breakpoints, sm)) {
+        .flex-row-reverse {
+            .left-column {
+                padding-left: 15px;
+            }
+        }
+    }
+
+}

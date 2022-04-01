@@ -1,16 +1,11 @@
-*,
-*::before,
-*::after {
-	box-sizing: border-box;
-}
-
-img {
-    max-width: 100%;
-    height: auto;
-}
-
 @import "parts/variable";
-@import "../../node_modules/normalize.css/normalize";
+@import "parts/mixins";
+
+/**
+* Preload all page styles
+*/
+
+@import "reset";
 @import "parts/typography";
 @import "parts/main_menu";
 @import "parts/header";

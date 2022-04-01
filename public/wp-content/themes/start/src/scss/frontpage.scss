@@ -3,7 +3,9 @@
  * Copyright 2022 Arvosoftware
  * Copyright 2022 Arvosoftware, Inc.
  */
+ @import "all_pages";
 
- @import "parts/variable";
- @import '../../node_modules/bootstrap/scss/bootstrap-grid';
+ @import 'parts/flags';
  @import 'parts/section_two_col';
+ @import 'parts/section_cta';
+ @import 'parts/footer';

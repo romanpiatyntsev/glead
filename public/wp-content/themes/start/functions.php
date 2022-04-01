@@ -45,6 +45,9 @@ function start_setup() {
 	register_nav_menus(
 		array(
 			'menu-1' => esc_html__( 'Primary', 'start' ),
+			'footer-menu-1' => esc_html__( 'Footer One', 'start' ),
+			'footer-menu-2' => esc_html__( 'Footer Two', 'start' ),
+			'footer-menu-3' => esc_html__( 'Footer Three', 'start' ),
 		)
 	);
 
@@ -126,6 +129,42 @@ function start_widgets_init() {
 			'after_title'   => '</h2>',
 		)
 	);
+
+	register_sidebar(
+		array(
+			'name'          => esc_html__( 'Footer Address Two', 'start' ),
+			'id'            => 'footer-address-2',
+			'description'   => esc_html__( 'Add widgets here.', 'start' ),
+			'before_widget' => '<div id="%1$s" class="widget %2$s">',
+			'after_widget'  => '</div>',
+			'before_title'  => '<h3 class="widget-title">',
+			'after_title'   => '</h3>',
+		)
+	);
+
+	register_sidebar(
+		array(
+			'name'          => esc_html__( 'Footer Address Three', 'start' ),
+			'id'            => 'footer-address-3',
+			'description'   => esc_html__( 'Add widgets here.', 'start' ),
+			'before_widget' => '<div id="%1$s" class="widget %2$s">',
+			'after_widget'  => '</div>',
+			'before_title'  => '<h3 class="widget-title">',
+			'after_title'   => '</h3>',
+		)
+	);
+
+	register_sidebar(
+		array(
+			'name'          => esc_html__( 'Footer Address One', 'start' ),
+			'id'            => 'footer-address-1',
+			'description'   => esc_html__( 'Add widgets here.', 'start' ),
+			'before_widget' => '<div id="%1$s" class="widget %2$s">',
+			'after_widget'  => '</div>',
+			'before_title'  => '<h3 class="widget-title">',
+			'after_title'   => '</h3>',
+		)
+	);
 }
 add_action( 'widgets_init', 'start_widgets_init' );
 
@@ -134,7 +173,11 @@ add_action( 'widgets_init', 'start_widgets_init' );
  */
 function start_scripts() {
 	//wp_enqueue_style( 'start-style', get_stylesheet_uri(), array(), _S_VERSION );
-	wp_enqueue_style( 'main-style', get_template_directory_uri() . '/assets/css/main.css', array(), _S_VERSION );
+	if ( is_front_page() ) {
+		wp_enqueue_style( 'main-style', get_template_directory_uri() . '/assets/css/frontpage.css', array(), _S_VERSION );
+	} else {
+		wp_enqueue_style( 'main-style', get_template_directory_uri() . '/assets/css/main.css', array(), _S_VERSION );
+	}
 
 	wp_enqueue_script( 'start-navigation', get_template_directory_uri() . '/assets/js/navigation.js', array(), _S_VERSION, true );
 
@@ -253,6 +296,12 @@ if( function_exists('acf_add_options_page') ) {
 	// 	'parent_slug'	=> 'theme-general-settings',
 	// ));
 }
+
+
+/**
+ * Implement the Shortcodes.
+ */
+require get_template_directory() . '/inc/shortcodes.php';
 
 /**
  * Implement the Custom Header feature.

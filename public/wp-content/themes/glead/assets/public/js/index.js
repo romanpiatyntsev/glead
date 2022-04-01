@@ -1,1 +1,0 @@
-(()=>{"use strict";document.addEventListener("DOMContentLoaded",(function(o){VANTA.TOPOLOGY({el:"#bg-animated",mouseControls:!1,touchControls:!1,gyroControls:!1,minHeight:200,minWidth:200,scale:1,scaleMobile:2,color:11618376,backgroundColor:3604737})}))})();
