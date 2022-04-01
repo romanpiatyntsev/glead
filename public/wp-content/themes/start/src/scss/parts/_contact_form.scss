@@ -1,55 +1,37 @@
-.wpcf7-form {
-    padding: 40px 35px 45px;
+.wpcf7 {
+    position: relative;
+    padding: 25px 15px 45px;
+    margin-bottom: 15px;
+    background: #f1f1f1;
+    border-radius: 5px;
 
-    .user-file-wrapper {
-        margin-bottom: 25px;
-    }
     .wpcf7-form-control-wrap {
-        display: block;
-        margin-bottom: 25px;
         position: relative;
-    }
-    .wpcf7-form-control {
-        border: none;
-        border-radius: 5px;
-        height: auto;
-        padding: 20px;
-    
-        .user-file {
-            display: none;
-        }
-    }
-    
-    .wpcf7-not-valid-tip {
-        bottom: -22px;
-        font-size: 12px;
-        left: 5px;
-        position: absolute;
-    }
-    
-    .wpcf7-submit {
-        background: #d61d25;
-        color: #fff;
-    }
-    
-    .wpcf7-submit:hover {
-        background: #a9171d;
-    }
-    .wpcf7-response-output {
-        margin: 35px 0 0!important;
-        padding: 15px!important;
-        text-align: center;
+        display: block;
+        padding-bottom: 25px;
     }
 
-    &.invalid {
-        .wpcf7-response-output {
-            border: 1px solid #d61d25!important;
-        }
+    .wpcf7-not-valid-tip {
+        position: absolute;
+        bottom: 7px;
+        left: 0;
+        font-size: 13px;
+        color: $primary-color;
+    }
+
+    .wpcf7-response-output {
+        text-align: center;
+        margin: 35px 0 0 0 !important;
+        padding: 10px 0 !important;
+    }
+
+    .wpcf7-submit {
+        margin: 15px 0 0 0;
     }
 
     .wpcf7-spinner {
-        position: absolute;
-        top: 16px;
+        position: relative;
+        top: 9px;
     }
     
     .user-file-wrapper {
@@ -122,6 +104,35 @@
             i:hover {
                 color: #d61d25;
             }
+        }
+    }
+
+    @media (min-width: map-get($grid-breakpoints, md) ) {
+        padding: 45px;
+    }
+}
+
+.contact-info {
+    margin-bottom: 70px;
+
+    p {
+        margin-top: 0;
+        img {
+            border-radius: 5px;
+            width: 100%;
+            filter: grayscale(80%);
+        }
+    }
+    h3 {
+        font-size: 26px;
+    }
+    a {
+        display: block;
+        margin-top: 15px;
+        color: $text-color;
+
+        &:hover {
+            color: $primary-color;
         }
     }
 }

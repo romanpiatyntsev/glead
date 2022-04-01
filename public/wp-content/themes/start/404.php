@@ -10,7 +10,7 @@
 get_header();
 ?>
 
-	<main id="primary" class="site-main">
+	<div class="container">
 
 		<section class="error-404 not-found">
 			<header class="page-header">
@@ -43,18 +43,10 @@ get_header();
 						</ul>
 					</div><!-- .widget -->
 
-					<?php
-					/* translators: %1$s: smiley */
-					$start_archive_content = '<p>' . sprintf( esc_html__( 'Try looking in the monthly archives. %1$s', 'start' ), convert_smilies( ':)' ) ) . '</p>';
-					the_widget( 'WP_Widget_Archives', 'dropdown=1', "after_title=</h2>$start_archive_content" );
-
-					the_widget( 'WP_Widget_Tag_Cloud' );
-					?>
-
 			</div><!-- .page-content -->
 		</section><!-- .error-404 -->
 
-	</main><!-- #main -->
+	</div>
 
 <?php
 get_footer();

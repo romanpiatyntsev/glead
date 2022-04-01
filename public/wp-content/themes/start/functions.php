@@ -254,8 +254,8 @@ function arvo_get_font_face_styles() {
  */
 function arvo_preload_webfonts() {
 	?>
-	<link rel="preload" href="<?php echo esc_url( get_theme_file_uri( 'assets/fonts/montserat_700_latin.woff2' ) ); ?>" as="font" type="font/woff2" crossorigin>
-	<link rel="preload" href="<?php echo esc_url( get_theme_file_uri( 'assets/fonts/roboto_300_latin.woff2' ) ); ?>" as="font" type="font/woff2" crossorigin>
+	<link rel="preload" href="<?php echo esc_url( get_theme_file_uri( 'assets/fonts/montserat_700_latin.woff2' ) ); ?>" as="font" crossorigin>
+	<link rel="preload" href="<?php echo esc_url( get_theme_file_uri( 'assets/fonts/roboto_300_latin.woff2' ) ); ?>" as="font" crossorigin>
 	<?php
 }
 

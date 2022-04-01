@@ -23,7 +23,9 @@ function arvo_phone_shortcode( $atts ){
 		'location' => '',
 	), $atts );
 	$location = get_field( $atts['location'], 'option' );
-	return sprintf( '<a href="tel:%1$s">%1$s</a>', $location['tel'] );
+	$tel = $location['tel'];
+	$tel_link = str_replace(' ', '', $tel);
+	return sprintf( '<a href="tel:%s">%s</a>', $tel_link, $tel );
 }
 
 add_shortcode( 'phone', 'arvo_phone_shortcode' );

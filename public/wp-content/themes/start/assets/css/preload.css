@@ -1,26 +1,6 @@
 /**
 * Preload all page styles
 */
-*,
-*::before,
-*::after {
-	box-sizing: border-box;
-}
-
-img {
-	max-width: 100%;
-	height: auto;
-}
-
-a {
-	text-decoration: none;
-	color: #d61d25;
-}
-
-a:hover {
-	color: #e8575e;
-}
-
 /*! normalize.css v8.0.1 | MIT License | github.com/necolas/normalize.css */
 /* Document
    ========================================================================== */
@@ -358,6 +338,34 @@ template {
  */
 [hidden] {
 	display: none;
+}
+
+*,
+*::before,
+*::after {
+	box-sizing: border-box;
+}
+
+img {
+	max-width: 100%;
+	height: auto;
+}
+
+a {
+	text-decoration: none;
+	color: #d61d25;
+}
+
+a:hover {
+	color: #e8575e;
+}
+
+.site {
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+	min-height: 100vh;
+	height: 100%;
 }
 
 body {

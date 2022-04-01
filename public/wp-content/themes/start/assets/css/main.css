@@ -4207,4 +4207,187 @@
 	}
 }
 
+input[type="text"],
+input[type="url"],
+input[type="email"],
+input[type="tel"],
+input[type="search"],
+textarea {
+	display: block;
+	padding: 20px;
+	border-radius: 5px;
+	border: 1px solid #f1f1f1;
+	outline: none;
+	width: 100%;
+}
+
+input[type="submit"] {
+	border: none;
+	border-radius: 5px;
+	background: #d61d25;
+	color: #fff;
+	padding: 15px 20px;
+	cursor: pointer;
+	transition: background 0.3s ease-out;
+	font-weight: bold;
+}
+
+input[type="submit"]:hover {
+	background: #a9171d;
+	transition: background 0.3s ease-in;
+}
+
+.wpcf7 {
+	position: relative;
+	padding: 25px 15px 45px;
+	margin-bottom: 15px;
+	background: #f1f1f1;
+	border-radius: 5px;
+}
+
+.wpcf7 .wpcf7-form-control-wrap {
+	position: relative;
+	display: block;
+	padding-bottom: 25px;
+}
+
+.wpcf7 .wpcf7-not-valid-tip {
+	position: absolute;
+	bottom: 7px;
+	left: 0;
+	font-size: 13px;
+	color: #d61d25;
+}
+
+.wpcf7 .wpcf7-response-output {
+	text-align: center;
+	margin: 35px 0 0 0 !important;
+	padding: 10px 0 !important;
+}
+
+.wpcf7 .wpcf7-submit {
+	margin: 15px 0 0 0;
+}
+
+.wpcf7 .wpcf7-spinner {
+	position: relative;
+	top: 9px;
+}
+
+.wpcf7 .user-file-wrapper {
+	font-size: 16px;
+	margin-bottom: 25px;
+	position: relative;
+}
+
+.wpcf7 .user-file-wrapper .wpcf7-form-control-wrap {
+	margin: 0;
+	padding: 0;
+}
+
+.wpcf7 .user-file-wrapper label {
+	margin-bottom: 33px;
+}
+
+.wpcf7 .user-file-wrapper label br {
+	display: none;
+}
+
+.wpcf7 .user-file-wrapper label i {
+	color: #d61d25;
+	font-size: 20px;
+	padding-right: 10px;
+}
+
+.wpcf7 .user-file-wrapper label span {
+	color: #969696;
+	display: block;
+	font-size: 12px;
+	font-weight: 100;
+}
+
+.wpcf7 .user-file-wrapper .wpcf7-file {
+	margin: 0;
+	opacity: 0;
+	padding: 0;
+	position: absolute;
+}
+
+.wpcf7 .user-file-wrapper .file-list-wrapper {
+	background: #f8f8f8;
+	border: 1px solid #d4d4d4;
+	border-radius: 5px;
+	color: #000;
+	display: flex;
+	left: 0;
+	padding: 10px 45px 10px 15px;
+	position: absolute;
+	top: 0;
+	width: 100%;
+}
+
+.wpcf7 .user-file-wrapper .file-list-wrapper .file-name {
+	overflow: hidden;
+	text-overflow: ellipsis;
+	white-space: nowrap;
+}
+
+.wpcf7 .user-file-wrapper .file-list-wrapper i {
+	cursor: pointer;
+	font-size: 25px;
+	line-height: 1;
+	padding: 5px;
+	position: absolute;
+	right: 6px;
+	top: 50%;
+	transform: translateY(-50%);
+}
+
+.wpcf7 .user-file-wrapper .file-list-wrapper i:hover {
+	color: #d61d25;
+}
+
+@media (min-width: 768px) {
+	.wpcf7 {
+		padding: 45px;
+	}
+}
+
+.contact-info {
+	margin-bottom: 70px;
+}
+
+.contact-info p {
+	margin-top: 0;
+}
+
+.contact-info p img {
+	border-radius: 5px;
+	width: 100%;
+	filter: grayscale(80%);
+}
+
+.contact-info h3 {
+	font-size: 26px;
+}
+
+.contact-info a {
+	display: block;
+	margin-top: 15px;
+	color: #000;
+}
+
+.contact-info a:hover {
+	color: #d61d25;
+}
+
+.search-form {
+	display: flex;
+}
+
+.search-form label {
+	flex: 1;
+	margin-right: 15px;
+}
+
 /*# sourceMappingURL=main.css.map */
