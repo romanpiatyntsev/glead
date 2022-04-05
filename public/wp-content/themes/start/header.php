@@ -27,6 +27,19 @@
 <div id="page" class="site">
 
 	<header id="masthead" class="site-header">
+
+		<?php
+		if( is_front_page() ) :
+		?>
+			<div class="banner">
+				<?php $link = get_field('banner-top', 'option'); ?>
+				<?php echo acf_link_parser( $link, 'banner-link' ); ?>
+				<span class="banner-close">+</span>
+			</div>
+		<?php
+		endif;
+		?>
+
 		<div class="custom-container">
 			<div class="site-branding">
 				<?php the_custom_logo(); ?>

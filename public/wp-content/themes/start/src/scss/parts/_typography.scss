@@ -1,15 +1,15 @@
 body {
     font-size: 16px;
     color: $text-color;
-    font-family: Roboto, sans-serif;
+    font-family: 'Source Sanse Pro', Roboto, sans-serif;
 }
 
 h1, h2, h3, h4, h5, h6 {
-    font-family: Montserrat;
+    font-family: Brandon;
 }
 
 h1 {
-    font-size: clamp(40px, 4vw, 7em);
+    font-size: clamp(40px, 4.2vw, 7em);
 }
 
 h2 {

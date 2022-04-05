@@ -32,10 +32,6 @@ nav {
             height: 100%;
             padding: 10px 50px;
 
-            &:last-child {
-                padding-right: 0;
-            }
-
             &.current-menu-item > a {
                 color: $primary-color; 
                 position: relative;
@@ -47,6 +43,10 @@ nav {
                 transition: color 0.3s ease-in;
                 position: relative;
                 padding: 0;
+                font-size: 18px;
+                letter-spacing: 2px;
+
+
 
                 &:hover {
                     color: $primary-color;
@@ -118,11 +118,12 @@ nav {
         .menu {
             display: none;
             position: fixed;
+            margin-top: 25px;
             left: 0;
             right: 0;
-            top: 100px;
-            bottom: 0;
+            height:100%;
             background: #fff;
+            z-index: 2;
 
             & > .menu-item {
                 display: block;

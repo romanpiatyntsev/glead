@@ -35,3 +35,11 @@ function start_pingback_header() {
 	}
 }
 add_action( 'wp_head', 'start_pingback_header' );
+
+function acf_link_parser( $link, $class = '' ) {
+	$title = esc_html( $link['title'] ); 
+	$url = esc_url( $link['url'] );
+	$target = $link['target'];
+	$clases = $class ? ' class="' . $class  . '"' : '';
+	return sprintf( '<a href="%s" target="%s"%s>%s</a>', $url, $target, $clases, $title );
+}

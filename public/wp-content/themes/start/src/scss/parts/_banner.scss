@@ -1,0 +1,31 @@
+.banner {
+    background: $primary-color;
+    text-align: center;
+    font-weight: bold;
+    padding: 15px 0;
+    position: relative;
+    letter-spacing: 2px;
+    color: #fff;
+
+    &.closed {
+        display: none;
+    }
+
+    a {
+        color: #fff;
+    }
+
+    .banner-close {
+        position: absolute;
+        font-size: 30px;
+        width: 30px;
+        height: 30px;
+        right: 20px;
+        top: 50%;
+        transform: translateY(-50%) rotate(45deg);
+        cursor: pointer;
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+    }
+}

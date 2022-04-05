@@ -235,12 +235,21 @@ function arvo_get_font_face_styles() {
 	}
 
 	@font-face{
-		font-family: 'Roboto';
-		font-weight: 300;
+		font-family: 'Brandon';
+		font-weight: 700;
 		font-style: normal;
 		font-stretch: normal;
 		font-display: swap;
-		src: url('" . get_theme_file_uri( 'assets/fonts/roboto_300_latin.woff2' ) . "') format('woff2');
+		src: url('" . get_theme_file_uri( 'assets/fonts/brandon_700.woff2' ) . "') format('woff2');
+	}
+
+	@font-face{
+		font-family: 'Source Sanse Pro';
+		font-weight: 400;
+		font-style: normal;
+		font-stretch: normal;
+		font-display: swap;
+		src: url('" . get_theme_file_uri( 'assets/fonts/source_sanse_pro.woff2' ) . "') format('woff2');
 	}
 	";
 }
@@ -254,8 +263,9 @@ function arvo_get_font_face_styles() {
  */
 function arvo_preload_webfonts() {
 	?>
-	<link rel="preload" href="<?php echo esc_url( get_theme_file_uri( 'assets/fonts/montserat_700_latin.woff2' ) ); ?>" as="font" crossorigin>
-	<link rel="preload" href="<?php echo esc_url( get_theme_file_uri( 'assets/fonts/roboto_300_latin.woff2' ) ); ?>" as="font" crossorigin>
+	<link rel="preload" href="<?php echo esc_url( get_theme_file_uri( 'assets/fonts/brandon_700.woff2' ) ); ?>" as="font" crossorigin>
+	<!-- <link rel="preload" href="<?php // echo esc_url( get_theme_file_uri( 'assets/fonts/montserat_700_latin.woff2' ) ); ?>" as="font" crossorigin>	 -->
+	<link rel="preload" href="<?php echo esc_url( get_theme_file_uri( 'assets/fonts/source_sanse_pro.woff2' ) ); ?>" as="font" crossorigin>
 	<?php
 }
 

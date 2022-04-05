@@ -371,15 +371,15 @@ a:hover {
 body {
 	font-size: 16px;
 	color: #000;
-	font-family: Roboto, sans-serif;
+	font-family: 'Source Sanse Pro', Roboto, sans-serif;
 }
 
 h1, h2, h3, h4, h5, h6 {
-	font-family: Montserrat;
+	font-family: Brandon;
 }
 
 h1 {
-	font-size: clamp(40px, 4vw, 7em);
+	font-size: clamp(40px, 4.2vw, 7em);
 }
 
 h2 {
@@ -429,10 +429,6 @@ nav .menu > .menu-item {
 	/* bg top level menu */
 }
 
-nav .menu > .menu-item:last-child {
-	padding-right: 0;
-}
-
 nav .menu > .menu-item.current-menu-item > a {
 	color: #d61d25;
 	position: relative;
@@ -443,6 +439,8 @@ nav .menu > .menu-item > a {
 	transition: color 0.3s ease-in;
 	position: relative;
 	padding: 0;
+	font-size: 18px;
+	letter-spacing: 2px;
 }
 
 nav .menu > .menu-item > a:hover {
@@ -510,11 +508,12 @@ nav .menu-toggle {
 	nav .menu {
 		display: none;
 		position: fixed;
+		margin-top: 25px;
 		left: 0;
 		right: 0;
-		top: 100px;
-		bottom: 0;
+		height: 100%;
 		background: #fff;
+		z-index: 2;
 		/* first submenu */
 	}
 	nav .menu > .menu-item {
@@ -554,6 +553,38 @@ nav .menu-toggle {
 	}
 }
 
+.banner {
+	background: #d61d25;
+	text-align: center;
+	font-weight: bold;
+	padding: 15px 0;
+	position: relative;
+	letter-spacing: 2px;
+	color: #fff;
+}
+
+.banner.closed {
+	display: none;
+}
+
+.banner a {
+	color: #fff;
+}
+
+.banner .banner-close {
+	position: absolute;
+	font-size: 30px;
+	width: 30px;
+	height: 30px;
+	right: 20px;
+	top: 50%;
+	transform: translateY(-50%) rotate(45deg);
+	cursor: pointer;
+	display: inline-flex;
+	align-items: center;
+	justify-content: center;
+}
+
 .custom-container {
 	display: flex;
 	justify-content: space-between;
@@ -562,34 +593,33 @@ nav .menu-toggle {
 	margin: 0 auto;
 }
 
-.site-header {
-	padding: 15px 0;
-}
-
 .site-header .custom-logo-link {
 	display: block;
 	font-size: 0;
 }
 
 .site-header .custom-logo {
-	width: 120px;
+	width: 251px;
 	height: auto;
 }
 
 .site-header .custom-container {
 	align-items: center;
+	padding: 45px 0;
 }
 
 .front-header {
-	padding: 50px 0;
+	padding: 20px 0 45px 0;
 }
 
 .front-header h1 {
-	margin: 0.2em 0 0.5em 0;
+	margin: 0 0 0.5em 0;
 }
 
 .front-header p {
-	font-size: 20px;
+	font-size: 19px;
+	font-weight: bold;
+	letter-spacing: 1px;
 }
 
 .front-header a {
@@ -615,7 +645,7 @@ nav .menu-toggle {
 }
 
 .front-header .column.image {
-	width: 40%;
+	width: 35%;
 }
 
 @media (max-width: 768px) {
